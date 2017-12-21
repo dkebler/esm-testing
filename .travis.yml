@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - '7.10'
+  - 'node'
+
+sudo: false
+
+script: npm test
+
+after_success:
+ - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
