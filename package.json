@@ -1,11 +1,10 @@
 {
-  "name": "@uci/device",
+  "name": "@uci/esmtesting",
   "version": "0.1.0",
-  "description": "Mutli Level/Transport Message/Event Classes",
+  "description": "Test for esm",
   "main": "index.js",
   "scripts": {
-    "testw": "node -r @std/esm ./node_modules/.bin/_mocha ./test --compilers=mjs:@std/esm --reporter list --recursive --watch",
-    "test": "istanbul cover ./node_modules/.bin/_mocha  --report lcovonly -- -R spec --recursive && codecov || true"
+    "start": "node -r @std/esm test"
   },
   "author": "David Kebler",
   "license": "MIT",
@@ -23,18 +22,11 @@
     "url": "https://github.com/uCOMmandIt/message/issues"
   },
   "homepage": "https://github.com/uCOMmandIt/message#readme",
-  "dependencies": {
-    "@uci/require-all": "^2.x",
-    "aggregation": "^1.2.1",
-    "node-ipc": "^9.1.1"
-  },
-    "@std/esm": "cjs",
+  "@std/esm": "cjs",
   "devDependencies": {
-    "@std/esm": "^0.18.0",
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
-    "codecov": "^3.0.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^4.0.1"
+    "@std/esm": "^0.18.0"
+  },
+  "dependencies": {
+    "json-ipc-lib": "^1.0.2"
   }
 }
